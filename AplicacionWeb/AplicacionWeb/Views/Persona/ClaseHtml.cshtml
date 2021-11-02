@@ -1,0 +1,33 @@
+﻿@model AplicacionWeb.Models.Persona
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ClaseHtml</title>
+</head>
+<body>
+    <div> 
+      
+        @using (Html.BeginForm("ClaseHtml","Persona",FormMethod.Post)) {
+        
+        <label>Nombre usuarios</label>
+        @Html.TextBoxFor(a=>a.Nombre)
+        <br />
+
+        <label>Pasword</label>
+        @Html.TextBoxFor(a => a.Contr)
+
+            <input type="submit"/>
+        
+        }
+
+        @Html.ActionLink("Welcome page", "Welcome")
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿
+@model AplicacionWeb.Models.Persona
+
+@{
+    ViewBag.Title = "PersonaVista";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>PersonaVista</h2>
+
+@using (Html.BeginForm("PersonaVista", "Persona", FormMethod.Post))
+{
+
+
+    <label>Nombre</label>
+    @Html.TextBoxFor(a => a.Nombre)
+    <br />
+    <label>Apellido</label>
+    @Html.TextBoxFor(a => a.Apellido)
+
+    <input type="submit" />
+    <h1>Hola mundo</h1>
+
+}
+
